@@ -1,0 +1,86 @@
+/* CSS Variables - Tema oscuro */
+:root {
+  --background: 222 58% 10%; /* #0B1325 */
+  --foreground: 240 14% 92%; /* #EAEAF0 */
+  --card: 228 31% 14%; /* #1A1D30 */
+  --card-foreground: 240 14% 92%; /* #EAEAF0 */
+  --popover: 228 31% 14%; /* #1A1D30 */
+  --popover-foreground: 240 14% 92%; /* #EAEAF0 */
+  --primary: 275 97% 71%; /* #9B6EFD */
+  --primary-foreground: 240 14% 92%;
+  --secondary: 287 96% 39%; /* #9C05C3 */
+  --secondary-foreground: 240 14% 92%;
+  --muted: 228 31% 14%;
+  --muted-foreground: 223 13% 61%; /* #8D93AB */
+  --accent: 284 43% 54%; /* #A559BA */
+  --accent-foreground: 240 14% 92%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5% 19%; /* rgba(255,255,255,0.12) equivalent */
+  --input: 240 5% 22%;
+  --ring: 275 97% 71%; /* #9B6EFD */
+  --radius: 0.5rem;
+
+  --pri-a-hsl: 216 78% 70%; /* #78A3ED */
+  --pri-b-hsl: 275 97% 71%; /* #9B6EFD */
+  --pri-c-hsl: 349 84% 70%; /* #F0768C */
+
+  --grad-hero: linear-gradient(90deg, hsl(var(--pri-a-hsl)), hsl(var(--pri-b-hsl)) 35%, hsl(var(--pri-c-hsl)) 70%);
+  --grad-cta: radial-gradient(60% 60% at 50% 50%, hsl(var(--pri-a-hsl)), hsl(var(--pri-b-hsl)) 55%, hsl(var(--pri-c-hsl)));
+}
+
+/* Reset y estilos base */
+* {
+  box-sizing: border-box;
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout principal */
+.app-container {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #0A0D10;
+}
+
+.main-content {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  align-items: flex-start; /* alineado arriba */
+  justify-content: center;
+  padding: 0rem; /* SIN padding */
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 50rem; /* max-w-3xl - más estrecho como React */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem; /* aún más separación entre secciones principales */
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Utilidades */
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive styles moved to responsive.css to avoid conflicts */
